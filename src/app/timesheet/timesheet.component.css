@@ -1,0 +1,13 @@
+.container {
+  width: 750px;
+}
+
+.form-control.search-user {
+  width: 25%;
+  display: inline-block;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+}

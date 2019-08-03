@@ -1,0 +1,42 @@
+/* Add application styles & imports to this file! */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+
+form {
+  padding: 1em;
+}
+
+body {
+  min-width: 400px;
+  min-height: 300px;
+  padding: 10px;
+}
+
+/* Small loader circle*/
+.loading-circle-small {
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  animation: spin 2s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+small.error {
+  color: red;
+}

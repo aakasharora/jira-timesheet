@@ -1,0 +1,22 @@
+{
+    "browser_action": {
+        "default_icon": "assets/icons/timesheet.png",
+        "default_popup": "index.html",
+        "default_title": "Jira Timesheet"
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "description": "View your Jira project timesheet. It can be used to track and improve productivity.",
+    "icons": {
+        "128": "assets/icons/timesheet.png",
+        "64": "assets/icons/timesheet.png"
+    },
+    "manifest_version": 2,
+    "name": "Jira Timesheet for Google Chrome",
+    "permissions": [
+        "http://*/",
+        "https://*/",
+        "storage"
+    ],
+    "short_name": "Jira-TimeSheet",
+    "version": "0.7"
+}

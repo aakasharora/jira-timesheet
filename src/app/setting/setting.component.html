@@ -1,0 +1,21 @@
+<form [formGroup]="settingForm">
+  <div class="form-group">
+    <label>Jira URL</label>
+    <input type="text" class="form-control" formControlName="jiraUrl">
+  </div>
+  <div class="form-group">
+    <label>Project Key</label>
+    <input type="text" class="form-control" formControlName="projectKey">
+  </div>
+
+  <button (click)="viewTimesheet()" class="btn btn-primary" [disabled]="settingForm.invalid || show.loader">
+    <span>View Timesheet</span>
+  </button>
+  <div *ngIf="show.loader">
+    <span>Validating...</span>
+    <span class="loading-circle-small"></span>
+  </div>
+  <div>
+    <small *ngIf="validated" class="error">{{errorMessage}}</small>
+  </div>
+</form>

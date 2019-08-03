@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="top-nav">
+        <input type="text" [formControl]="user" class="form-control search-user" placeholder="Search">
+        <button class="btn btn-default" (click)="updateStartDate(-7)">
+            <i class="glyphicon glyphicon-backward"></i>
+            &nbsp;<span>Last Week</span>
+        </button>
+        <button class="btn btn-default" (click)="updateStartDate(7)">
+            <span>Next Week</span>&nbsp;
+            <i class="glyphicon glyphicon-forward"></i>
+        </button>
+        <button class="btn btn-default" title="Setting" (click)="onSetting()">
+            <i class="glyphicon glyphicon-cog"></i>
+        </button>
+    </div>
+    <ng-container *ngIf="loading; else table">
+        <div class="loading-circle-small absolute-center"></div>
+    </ng-container>
+    <ng-template #table>
+        <app-table [dataSource]="timesheet"></app-table>
+    </ng-template>
+</div>

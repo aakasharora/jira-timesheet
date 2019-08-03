@@ -1,0 +1,19 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th *ngFor="let column of columns">
+        {{column}}
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows; let rowIndex=index;">
+      <td *ngFor="let column of columns; let columnIndex=index;">
+        <span [ngClass]="{'clickable': !!row[columnIndex] && columnsObject[column].clickable}"
+          (click)="onCellClick(row, columnIndex)">
+          {{row[columnIndex]}}
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
