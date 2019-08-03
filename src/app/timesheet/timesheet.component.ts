@@ -62,7 +62,7 @@ export class TimesheetComponent implements OnInit {
     this.timesheetService.getTimeSheet(startDate)
       .then((workLogs: AuthorWorkLogHours) => {
         this.workLogs = workLogs;
-        this.timesheet = this.timesheetService.getTableData(this.workLogs, this.weekDates);
+        this.timesheet = this.timesheetService.getTableData(this.workLogs, this.weekDates, this.user.value);
       }).catch((reason: HttpErrorResponse) => {
         this.router.navigate(['/', RoutePath.Setting]);
       }).finally(() => {
